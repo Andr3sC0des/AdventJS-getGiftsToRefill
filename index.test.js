@@ -1,5 +1,9 @@
 const { getGiftsToRefill } = require('./index')
 
+test('Test #01', () => {
+  expect(Array.isArray(getGiftsToRefill(['bike', 'car', 'bike', 'bike'], ['car', 'bike', 'doll', 'car'], ['bike', 'pc', 'pc']))).toStrictEqual(true)
+})
+
 test('Test #02', () => {
   expect(getGiftsToRefill(['bike', 'car', 'bike', 'bike'], ['car', 'bike', 'doll', 'car'], ['bike', 'pc', 'pc'])).toStrictEqual(['doll', 'pc'])
 })
